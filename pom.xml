@@ -76,5 +76,7 @@
     <modules>
         <module>commoncloud-api</module>
         <module>commoncloud-provider-dept-8001</module>
+        <module>commoncloud-consumer-dept-80</module>
+        <module>commoncloud-eureka-7001</module>
     </modules>
 </project>
