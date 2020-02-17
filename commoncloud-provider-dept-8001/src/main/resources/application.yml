@@ -24,6 +24,10 @@ spring:
       max-total: 5                                          # 最大连接数
       max-wait-millis: 200                                  # 等待连接获取的最大超时时间
 
+devtools:
+  restart:
+    additional-paths: src/main/java  #添加那个目录的文件需要restart
+
 logging:
   level:
     com:
@@ -36,3 +40,12 @@ eureka:
   client: #客户端注册进eureka服务列表内
     service-url:
       defaultZone: http://localhost:7001/eureka
+  instance:
+    instance-id: commoncloud-dept8001
+    prefer-ip-address: true
+
+info:
+  app.name: lht-commoncloud
+  company.name: www.lht.com
+  build.artifactId: $project.artifactId$
+  build.version: $project.version$

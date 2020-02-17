@@ -73,10 +73,33 @@
         </dependencies>
     </dependencyManagement>
 
+    <build>
+        <finalName>commoncloud</finalName>
+        <resources>
+            <resource>
+                <directory>src/main/resources</directory>
+                <filtering>true</filtering>
+            </resource>
+        </resources>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-resources-plugin</artifactId>
+                <configuration>
+                    <delimiters>
+                        <delimiter>$</delimiter>
+                    </delimiters>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+
     <modules>
         <module>commoncloud-api</module>
         <module>commoncloud-provider-dept-8001</module>
         <module>commoncloud-consumer-dept-80</module>
         <module>commoncloud-eureka-7001</module>
+        <module>commoncloud-eureka-7002</module>
+        <module>commoncloud-eureka-7003</module>
     </modules>
 </project>
