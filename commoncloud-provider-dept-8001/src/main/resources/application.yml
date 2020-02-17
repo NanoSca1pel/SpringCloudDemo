@@ -41,8 +41,8 @@ eureka:
     service-url:
       defaultZone: http://localhost:7001/eureka
   instance:
-    instance-id: commoncloud-dept8001
-    prefer-ip-address: true
+    instance-id: commoncloud-dept8001 #修改eureka注册中心的Status状态名称
+    prefer-ip-address: true #eureka访问路径可以显示IP地址
 
 info:
   app.name: lht-commoncloud

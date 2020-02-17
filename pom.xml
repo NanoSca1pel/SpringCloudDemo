@@ -77,17 +77,21 @@
         <finalName>commoncloud</finalName>
         <resources>
             <resource>
+                <!-- 允许访问工程下所有该地址上的资源文件 -->
                 <directory>src/main/resources</directory>
+                <!-- 开启访问过滤 -->
                 <filtering>true</filtering>
             </resource>
         </resources>
         <plugins>
             <plugin>
+                <!-- 资源解析插件 -->
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-resources-plugin</artifactId>
+                <!-- 在directory定义的目录下，以$开头，$结尾的资源文件可以读取 -->
                 <configuration>
                     <delimiters>
-                        <delimiter>$</delimiter>
+                        <delimit>$</delimit>
                     </delimiters>
                 </configuration>
             </plugin>
