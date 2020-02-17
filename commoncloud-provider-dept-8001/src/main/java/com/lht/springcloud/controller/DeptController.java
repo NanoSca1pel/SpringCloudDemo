@@ -7,6 +7,7 @@ import org.springframework.cloud.client.ServiceInstance;
 import org.springframework.cloud.client.discovery.DiscoveryClient;
 import org.springframework.web.bind.annotation.*;
 
+import javax.annotation.Resource;
 import java.util.List;
 
 /**
@@ -20,7 +21,7 @@ public class DeptController {
     @Autowired
     private DeptService service;
 
-    @Autowired
+    @Resource(name = "discoveryClient")
     private DiscoveryClient client;
 
 
