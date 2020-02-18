@@ -39,7 +39,8 @@ logging:
 eureka:
   client: #客户端注册进eureka服务列表内
     service-url:
-      defaultZone: http://localhost:7001/eureka
+      #defaultZone: http://localhost:7001/eureka 单机环境
+      defaultZone: http://eureka7001.com:7001/eureka/,http://eureka7002.com:7002/eureka/,http://eureka7003.com:7003/eureka/   #集群环境
   instance:
     instance-id: commoncloud-dept8001 #修改eureka注册中心的Status状态名称
     prefer-ip-address: true #eureka访问路径可以显示IP地址
@@ -47,5 +48,5 @@ eureka:
 info:
   app.name: lht-commoncloud
   company.name: www.lht.com
-  build.artifactId: $project.artifactId$
-  build.version: $project.version$
+  build.artifactId: ${project.artifactId}
+  build.version: ${project.version}

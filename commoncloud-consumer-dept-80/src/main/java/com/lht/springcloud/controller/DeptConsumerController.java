@@ -4,7 +4,9 @@ import com.lht.springcloud.cfgbean.ConfigBean;
 import com.lht.springcloud.entity.Dept;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.client.RestTemplate;
 
+import javax.annotation.Resource;
 import java.util.List;
 
 /**
@@ -15,10 +17,12 @@ import java.util.List;
 @RequestMapping("/consumer/dept")
 public class DeptConsumerController {
 
-    private static final String REST_URL_PREFIX = "http://localhost:8001";
+    //private static final String REST_URL_PREFIX = "http://localhost:8001";
+    //将原本固定写死的访问地址改成eureka上的微服务名，从原本的地址访问变成微服务访问
+    private static final String REST_URL_PREFIX = "http://COMMONCLOUD-DEPT";
 
-    @Autowired
-    private ConfigBean configBean;
+    @Resource(name = "myRestTemplate")
+    private RestTemplate restTemplate;
 
     /**
      * 使用RestTemplate访问result接口非常的简单粗暴无脑
@@ -29,13 +33,13 @@ public class DeptConsumerController {
      */
     @PostMapping("/add")
     public boolean add(@RequestBody Dept dept) {
-        return configBean.getRestTemplate().postForObject(REST_URL_PREFIX + "/dept/add", dept, Boolean.class);
+        return restTemplate.postForObject(REST_URL_PREFIX + "/dept/add", dept, Boolean.class);
     }
 
 
     @GetMapping("/get/{id}")
     public Dept get(@PathVariable("id") Long id) {
-        return configBean.getRestTemplate().getForObject(REST_URL_PREFIX + "/dept/get/" + id, Dept.class);
+        return restTemplate.getForObject(REST_URL_PREFIX + "/dept/get/" + id, Dept.class);
     }
 
 
@@ -43,12 +47,12 @@ public class DeptConsumerController {
     @SuppressWarnings("unchecked")
     @GetMapping("/list")
     public List<Dept> list() {
-        return configBean.getRestTemplate().getForObject(REST_URL_PREFIX + "/dept/list", List.class);
+        return restTemplate.getForObject(REST_URL_PREFIX + "/dept/list", List.class);
     }
 
     //测试@EnableDiscoveryClient，消费端可以调用服务发现
     @GetMapping("/discovery")
     public Object discovery() {
-        return configBean.getRestTemplate().getForObject(REST_URL_PREFIX + "/dept/discovery", Object.class);
+        return restTemplate.getForObject(REST_URL_PREFIX + "/dept/discovery", Object.class);
     }
 }
