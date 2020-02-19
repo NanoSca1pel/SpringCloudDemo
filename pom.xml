@@ -105,5 +105,8 @@
         <module>commoncloud-eureka-7001</module>
         <module>commoncloud-eureka-7002</module>
         <module>commoncloud-eureka-7003</module>
+        <module>commoncloud-provider-dept-8002</module>
+        <module>commoncloud-provider-dept-8003</module>
+        <module>commoncloud-consumer-dept-feign</module>
     </modules>
 </project>
