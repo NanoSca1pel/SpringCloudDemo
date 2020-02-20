@@ -108,5 +108,6 @@
         <module>commoncloud-provider-dept-8002</module>
         <module>commoncloud-provider-dept-8003</module>
         <module>commoncloud-consumer-dept-feign</module>
+        <module>commoncloud-provider-dept-hystrix-8001</module>
     </modules>
 </project>

@@ -9,8 +9,8 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>commoncloud-provider-dept-8002</artifactId>
-    <description>部门微服务提供者</description>
+    <artifactId>commoncloud-provider-dept-hystrix-8001</artifactId>
+    <description>带断路器的部门微服务提供者</description>
 
     <dependencies>
         <dependency>
@@ -76,7 +76,11 @@
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-config</artifactId>
         </dependency>
-
+        <!-- hystrix断路器 -->
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-hystrix</artifactId>
+        </dependency>
         <!-- actuator 主管监控和信息配置完善 -->
         <dependency>
             <groupId>org.springframework.boot</groupId>

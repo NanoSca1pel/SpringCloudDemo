@@ -1,4 +1,4 @@
-package com.lht.service;
+package com.lht.springcloud.service;
 
 import com.lht.springcloud.entity.Dept;
 import org.springframework.cloud.netflix.feign.FeignClient;

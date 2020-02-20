@@ -1,13 +1,10 @@
 package com.lht.springcloud.controller;
 
-import com.lht.service.DeptClientService;
-import com.lht.springcloud.cfgbean.ConfigBean;
+import com.lht.springcloud.service.DeptClientService;
 import com.lht.springcloud.entity.Dept;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
-import org.springframework.web.client.RestTemplate;
 
-import javax.annotation.Resource;
 import java.util.List;
 
 /**
