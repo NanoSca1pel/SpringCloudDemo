@@ -1,8 +1,6 @@
 package com.lht.springcloud.controller;
 
-import com.lht.springcloud.cfgbean.ConfigBean;
 import com.lht.springcloud.entity.Dept;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.client.RestTemplate;
 

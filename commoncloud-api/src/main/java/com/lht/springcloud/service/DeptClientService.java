@@ -13,7 +13,8 @@ import java.util.List;
  * @author lhtao
  * @date 2020/2/19 16:45
  */
-@FeignClient("COMMONCLOUD-DEPT")
+//@FeignClient("COMMONCLOUD-DEPT")
+@FeignClient(value = "COMMONCLOUD-DEPT", fallbackFactory = DeptClientServiceFallbackFactory.class)
 @RequestMapping("/dept")
 public interface DeptClientService {
 
