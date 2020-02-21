@@ -109,5 +109,7 @@
         <module>commoncloud-provider-dept-8003</module>
         <module>commoncloud-consumer-dept-feign</module>
         <module>commoncloud-provider-dept-hystrix-8001</module>
+        <module>commoncloud-consumer-hystrix-dashboard</module>
+        <module>commoncloud-zuul-gateway-9527</module>
     </modules>
 </project>
