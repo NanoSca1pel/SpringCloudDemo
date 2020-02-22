@@ -111,5 +111,7 @@
         <module>commoncloud-provider-dept-hystrix-8001</module>
         <module>commoncloud-consumer-hystrix-dashboard</module>
         <module>commoncloud-zuul-gateway-9527</module>
+        <module>commoncloud-config-3344</module>
+        <module>commoncloud-config-client-3355</module>
     </modules>
 </project>

@@ -1,0 +1,11 @@
+server:
+  port: 3344
+
+spring:
+  application:
+    name: commoncloud-config
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/NanoSca1pel/commoncloud-config.git #git@github.com:NanoSca1pel/commoncloud-config.git #Github上的git仓库名字
