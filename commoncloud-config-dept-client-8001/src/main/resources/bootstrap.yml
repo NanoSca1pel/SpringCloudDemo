@@ -1,0 +1,7 @@
+spring:
+  cloud:
+    config:
+      name: commoncloud-config-dept-client
+      profile: dev #profiles配置的是什么就读取什么配置 dev 或者 test
+      label: master
+      uri: http://config-3344.com:3344

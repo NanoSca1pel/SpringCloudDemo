@@ -1,0 +1,3 @@
+spring:
+  application:
+    name: commoncloud-config-dept-client

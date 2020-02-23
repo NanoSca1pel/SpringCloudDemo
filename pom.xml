@@ -113,5 +113,7 @@
         <module>commoncloud-zuul-gateway-9527</module>
         <module>commoncloud-config-3344</module>
         <module>commoncloud-config-client-3355</module>
+        <module>commoncloud-config-eureka-server-7001</module>
+        <module>commoncloud-config-dept-client-8001</module>
     </modules>
 </project>
