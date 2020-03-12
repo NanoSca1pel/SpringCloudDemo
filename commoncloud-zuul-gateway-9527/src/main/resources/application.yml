@@ -21,10 +21,10 @@ zuul:
     mydept.serviceId: commoncloud-dept
     #微服务映射的url
     mydept.path: /mydept/**
-  #配置后可以杜绝zuul使用微服务名访问接口地址
-  ignored-services: commoncloud-dept  #可以使用 "*" 来忽略所有的微服务
-  #可以配置路径公共前缀来区分
-  prefix: /lhtao
+    #配置后可以杜绝zuul使用微服务名访问接口地址
+    ignored-services: commoncloud-dept  #可以使用 "*" 来忽略所有的微服务
+    #可以配置路径公共前缀来区分
+    prefix: /lhtao
 
 info:
   app.name: lht-commoncloud
